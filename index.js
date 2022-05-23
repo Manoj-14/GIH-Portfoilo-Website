@@ -136,17 +136,18 @@ app.all("/contact-us", (req, res) => {
   usrData
     .save()
     .then((rest) => {
+      res.render("index.html");
       // res.send(rest);
-      client.messages
-        .create({
-          body: req.body.feedback,
-          to: `+919741626527`, // Text this number
-          from: "+12673234936", // From a valid Twilio number
-        })
-        .then((message) => res.render("index.html"))
-        .catch((err) => {
-          console.log(err);
-        });
+      // client.messages
+      //   .create({
+      //     body: req.body.feedback,
+      //     to: `+919741626527`, // Text this number
+      //     from: "+12673234936", // From a valid Twilio number
+      //   })
+      //   .then((message) => res.render("index.html"))
+      //   .catch((err) => {
+      //     console.log(err);
+      //   });
     })
     .catch((err) => {
       console.log(err);
