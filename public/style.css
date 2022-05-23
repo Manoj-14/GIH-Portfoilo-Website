@@ -1,0 +1,237 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 2rem;
+}
+a {
+  text-decoration: none;
+}
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #1b98e0c9;
+  height: 4rem;
+  width: 100vw;
+  position: fixed;
+  z-index: 11;
+
+  /* padding-right: 1rem; */
+}
+.nav-links ul li {
+  display: inline;
+  margin: 0 1rem;
+  padding: 0.3rem 0.4rem;
+  background-color: #e8f1f2;
+  /* border-radius: 10px; */
+  transition: all 500 ease-in-out;
+}
+.nav-links ul li a {
+  color: #1b98e0cb;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.nav-links ul li:hover {
+  background-color: #1b98e0;
+}
+.nav-links ul li:hover > a {
+  color: #e8f1f2;
+}
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  /* background-color: #1b98e0; */
+}
+header #head-div {
+  margin-left: 2rem;
+}
+header h2 {
+  font-size: 4rem;
+}
+header span {
+  font-size: 2rem;
+}
+#donate-form {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b98e090;
+  z-index: 10;
+  transform: scale(0);
+  transition: transform 300ms ease-in-out;
+}
+#donate-form > div {
+  background-color: white;
+  padding: 1rem;
+}
+
+#donate-form label {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+#donate-form input {
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #006494;
+}
+
+.material-textfield {
+  position: relative;
+  margin-top: 1rem;
+}
+label {
+  position: absolute;
+  font-size: 1rem;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: gray;
+  padding: 0 0.3rem;
+  margin: 0 0.5rem;
+  transition: 0.1s ease-out;
+  transform-origin: left top;
+  pointer-events: none;
+}
+input,
+textarea {
+  width: 30rem !important;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid gray;
+  /* border-radius: 5px; */
+  padding: 0.7rem 0.3rem;
+  color: #080357;
+  transition: 0.1s ease-out;
+  font-weight: 700;
+}
+/* #edit-prof {
+  border: 1px solid gray;
+  border-radius: 5px;
+} */
+input:focus,
+textarea:focus,
+#edit-prof {
+  border-color: var(--prmy-color);
+}
+input:focus + label,
+textarea:focus + label {
+  color: var(--prmy-color);
+  top: 0;
+  transform: translateY(-50%) scale(0.9);
+  border-radius: 10px;
+  font-weight: 700;
+}
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label {
+  top: 0;
+  transform: translateY(-50%) scale(0.9);
+}
+.submit {
+  width: 100%;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--sec-color3);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.material-textfield:last-child div {
+  color: #fff;
+  background-color: var(--sec-color3);
+  padding: 6px 10px;
+  flex-grow: 1;
+  flex-basis: 0;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.material-textfield:last-child div a {
+  font-size: larger;
+  font-weight: 600;
+}
+.material-textfield:last-child {
+  display: flex;
+}
+#submit {
+  width: 100%;
+  font-weight: 700;
+  color: #fff;
+  background-color: #006494 !important;
+  cursor: pointer;
+  font-size: 1rem;
+  border: none !important;
+}
+.supt-imgs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+.abc {
+  /* border: solid 2px rgb(73, 73, 189); */
+  /* background-color: cornflowerblue; */
+  /* color: white; */
+  width: 320px;
+  /* float: left; */
+  margin: 1rem;
+  /* padding: 1rem; */
+}
+h1 {
+  /* background-color: rgb(62, 104, 172); */
+  color: #1b98e0c9;
+  font-size: 50px;
+  /* text-align: center; */
+  padding-left: 2rem;
+}
+.pqr {
+  border: solid 2px rgb(73, 73, 189);
+  background-color: cornflowerblue;
+  color: white;
+  width: 300px;
+  text-align: center;
+  float: left;
+}
+.xyz {
+  clear: left;
+}
+
+.abc > button {
+  text-align: center;
+  width: min-content;
+  margin: auto;
+  padding: 0.5rem 2rem;
+  font-weight: 700;
+
+  background-color: #13293d;
+  color: white;
+  cursor: pointer;
+}
+.abc > * {
+  padding: 10px;
+}
+
+.xyz > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#preloader {
+  background: white url("/loader/loader.gif") no-repeat center;
+  background-size: 10%;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+}

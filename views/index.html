@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="shortcut icon" href="/logo.png" type="image/x-icon">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <title>NGO</title>
+    </head>
+
+    <body>
+        <div id="preloader"></div>
+        <nav class="nav-bar">
+            <div>
+                <a href="/"><img src="/logo.png" alt="logo" width="50px"></a>
+            </div>
+
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#contact">Contact US</a></li>
+                </ul>
+            </div>
+        </nav>
+        <header>
+            <div id="head-div">
+                <h2 class="animi">NGO Foundation</h2><br>
+                <span class="animi"><em>live for society</em></span><br>
+                <a href="#" class="animi">Donate</a>
+            </div>
+            <div id="img">
+                <img src="/ngo-illustration.jpg" alt="ngo" width="500px" id="img-head">
+            </div>
+        </header>
+        <main>
+            <div id="donate-form">
+                <div>
+                    <form method="post" action="donateDet" autocomplete="off">
+                        <div class="material-textfield">
+                            <input placeholder=" " required name="name" class="admin-user" type="text">
+                            <label>Username</label>
+                        </div>
+                        <div class="material-textfield">
+                            <input placeholder=" " required name="email" class="admin-user" type="email">
+                            <label>Email</label>
+
+                        </div>
+                        <div class="material-textfield">
+                            <input placeholder=" " required name="amount" class="admin-user" type="number">
+                            <label>Amount</label>
+                        </div>
+                        <div class="material-textfield">
+                            <input placeholder=" " id="submit" type="submit" value="Sign In">
+                        </div>
+                        <div class="material-textfield">
+                            <input placeholder=" " id="submit" type="button" onclick="clsForm()" value="Close">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+        <section>
+            <h1>Support</h1>
+            <div class="supt-imgs">
+                <!-- <div data-aos=""> -->
+                <figure data-aos="fade-right" class="abc">
+                    <img src="/img1.jpeg" alt="Social" width="320px" />
+                    <figcaption>We take up and execute projects to promote welfare of the community they work with.
+                        They
+                        work to
+                        address various concerns and issues prevailing within the society. We are not-for-profit
+                        bodies
+                        which means
+                        they do not have any commercial interest. We are run on donations made by individuals,
+                        corporate
+                        and
+                        institutions.</figcaption>
+                </figure>
+                <!-- </div> -->
+                <figure data-aos="zoom-in" class="abc">
+                    <img src="/img2.jpeg" alt="Old age" width="320px" />
+                    <figcaption>We offer the best medical treatments and take proper care of the elder persons which
+                        leads
+                        the
+                        elderly people to have a peaceful living. The people working in the NGOs take a good care of the
+                        elderly
+                        people and provide them comfort and happiness which is much needed by the elders.</figcaption>
+                </figure>
+                <figure data-aos="fade-left" class="abc">
+                    <img src="/img3).jpeg" alt="Developing society" width="320px" />
+                    <figcaption>To improve standards of society, We have developed to emphasize societal issues and for
+                        the
+                        sustainable development of society. The main motive of the NGO is to help the poor people and to
+                        develop the
+                        proper understanding and loopholes of the social, political and economic factors affecting the
+                        life
+                        of
+                        people.</figcaption>
+                </figure>
+        </section>
+        <section>
+            <h1 style="clear:left">Donations</h1>
+            <div class="supt-imgs">
+                <figure data-aos="fade-right" class="abc">
+                    <img src="/img4.gif" width="300px" height="250" />
+                    <figcaption>Donate for woman and child development.</figcaption>
+                    <a href="https://rzp.io/i/B6C1gJsc" target="_blank" rel="noopener noreferrer">DONATE</a>
+                    <!-- <button type="button" onclick="dispForm()">Donate</button> -->
+                </figure>
+                <figure data-aos="fade-left" class="abc">
+                    <img src="/img5.jpg" width="300px" height="250" />
+                    <figcaption>Donate for tribal community development.</figcaption>
+                    <a href="https://rzp.io/i/B6C1gJsc" target="_blank" rel="noopener noreferrer">DONATE</a>
+                    <!-- <button type="button" onclick="dispForm()">Donate</button> -->
+                </figure>
+            </div>
+        </section>
+        <section id="contact" class="xyz">
+            <h1>Contact Us</h1>
+            <div>
+                <form method="post" action="contact-us">
+                    <div class="material-textfield">
+                        <input placeholder=" " required name="name" class="admin-user" type="text">
+                        <label>Name</label>
+                    </div>
+                    <div class="material-textfield">
+                        <input placeholder=" " required name="email" class="admin-user" type="email">
+                        <label>Email</label>
+
+                    </div>
+                    <div class="material-textfield">
+                        <input placeholder=" " required name="phno" min="10" class="admin-user" type="Number">
+                        <label>Phone number</label>
+
+                    </div>
+                    <div class="material-textfield">
+                        <textarea rows="3" placeholder=" " required name="feedback" class="admin-user"
+                            type="email"></textarea>
+                        <label>Feedback</label>
+                    </div>
+
+                    <div class="material-textfield">
+                        <input placeholder=" " id="submit" type="submit" value="Submit">
+                    </div>
+                    <!-- Feedback:<input type="text" name="feedback"><br>
+                                    <input type="submit"> -->
+                </form>
+            </div>
+            <!-- </fieldset> -->
+        </section>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+        integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        AOS.init();
+        gsap.from(".animi", { opacity: 0, duration: 1.3, y: -50, stagger: 0.6 });
+        gsap.from("#img-head", { opacity: 0, duration: 1.3, y: 50 });
+        const donForm = document.getElementById("donate-form");
+        dispForm = () => {
+            donForm.style.transform = "scale(1)";
+            // console.log("HEllo")
+        }
+        clsForm = () => {
+            donForm.style.transform = "scale(0)";
+        }
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", () => {
+            setTimeout(function () {
+                loader.style.display = "none";
+            }, 1500);
+        });
+    </script>
+
+</html>
