@@ -19,12 +19,6 @@ app.use(express.static("images"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-const accountSid = "ACb8df18df8cdd6a9635c9b42bb01336eb"; // Your Account SID from www.twilio.com/console
-const authToken = "c5f42d4e3c5340dd0d0be6daa217c312"; // Your Auth Token from www.twilio.com/console
-
-// const twilio = require("twilio");
-const client = new twilio(accountSid, authToken);
-
 // client.messages
 //   .create({
 //     body: "Hello from Node",
@@ -137,17 +131,6 @@ app.all("/contact-us", (req, res) => {
     .save()
     .then((rest) => {
       res.render("index.html");
-      // res.send(rest);
-      // client.messages
-      //   .create({
-      //     body: req.body.feedback,
-      //     to: `+919741626527`, // Text this number
-      //     from: "+12673234936", // From a valid Twilio number
-      //   })
-      //   .then((message) => res.render("index.html"))
-      //   .catch((err) => {
-      //     console.log(err);
-      //   });
     })
     .catch((err) => {
       console.log(err);
