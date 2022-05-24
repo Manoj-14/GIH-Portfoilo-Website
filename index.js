@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
 const cons = require("consolidate");
+const nodemailer = require("nodemailer");
 var bodyParser = require("body-parser");
 const schema = mongoose.Schema;
 const twilio = require("twilio");
@@ -18,6 +19,14 @@ app.use(express.static(path.join(__dirname + "/public")));
 app.use(express.static("images"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "manumadhu1425@gmail.com",
+    pass: "yjwlfeliyxtmopni",
+  },
+});
 
 // client.messages
 //   .create({
@@ -110,9 +119,9 @@ app.all("/donateDet", (req, res) => {
           if (err) console.log(err);
           else {
             sum = user[0].Total_amount;
-            res.render("index.html", { name: sum });
+            res.redirect("/");
+            // res.render("index.html", { name: sum });
             console.log(sum);
-            // res.send(rest);
           }
         }
       );
@@ -130,7 +139,16 @@ app.all("/contact-us", (req, res) => {
   usrData
     .save()
     .then((rest) => {
-      res.render("index.html");
+      const mailoptions = {
+        from: "manumadhu1425@gmail.com",
+        to: req.body.email,
+        subject: "Thanks for getting in touch",
+        text: "Thanks for getting in touch with us we'll reach you soon",
+      };
+      transporter.sendMail(mailoptions, (err, mail) => {
+        if (err) console.log(err);
+        else res.redirect("/");
+      });
     })
     .catch((err) => {
       console.log(err);

@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/265dded7-f8e3-4c0e-9216-7b471045a2d7/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/gih-portfolio",
+  "appService.deploySubpath": "."
+}
