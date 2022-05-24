@@ -5,7 +5,7 @@ const cons = require("consolidate");
 const nodemailer = require("nodemailer");
 var bodyParser = require("body-parser");
 const schema = mongoose.Schema;
-const twilio = require("twilio");
+// const twilio = require("twilio");
 
 const app = express();
 
